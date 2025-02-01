@@ -63,6 +63,8 @@ twin-file browser in the top screen.
 Here you can simply navigate to a wav file and 
 press A to load it.
 
+Songs can be loaded the same way.
+
 
 Loading random samples (Categories View):
 -----------------------------------------
@@ -212,57 +214,8 @@ The "Intrupt" function will temporarily mute
 all other lanes and unmute them again at the 
 next bar when you play a sound.
 
-
-Grid Editor / Pattern screen
-----------------------------
-UPPER SCREEN
-
-C-Pad            Moves the cursor (upper screen)
-B + C-Pad        Moves 8 steps at once.
-A                Inserts or removes a note at the
-                 cursor (toggle)
-B                Plays current sound
-Y                Mutes current lane (toggle)
-X                Solo current lane (toggle)
-L                Clear all notes in current lane
-R                Select other deck (A/B).
-L + C-Pad up/dn  Select lanes and clear them 
-L + C-Pad side   Rotate notes
-R + C-Pad side   Select bar focus 
-                 (if auto-follow is disabled)
-
-LOWER SCREEN
-
-Crossfade        Sets the volume ratio between
-                 Deck A (left) and Deck B (right)
-                 
-Rand             Selects a random sample
-Follow           If enabled, the upper screen
-                 shows the currently playing bar.
-                 Only the a single bar is viewed
-                 when this option is disabled.
-Rand All         Selects random samples for all 
+Rand All         Selects random samples for all
                  lanes.
-                 
-Pattern Matrix   Selects a pattern when the next
-                 bar pays.
-Select + Pat     Selects a pattern immediately
-R + Pat          Copies the current pattern to
-                 a new slot and selects it.
-                 
-
-Parameter Automation
---------------------
-
-Press Start in the Grid Editor screen to see
-the automation editor.
-
-This is currently extremely crude and only allows
-setting a value for the currently selected column
-by sliding up or down with touch.
-
-The animatable parameters are:
-Volume, Note length, Slice Index, Sample Index
 
 
 Recording audio from microphone
@@ -296,9 +249,10 @@ paste the value again.
 
  CPAD       Move cursor
  A          launch cell (phrase)
+ AA         Launch entire current row
+ B + A      Launch entire current row
  B          Insert last value to cell
  B + CPAD   Change cell values (phrase)
- B +A       Launch row
  X          Cycle selection modes (cursor / all tracks)
  Y          Open menu
  Start      Toggle between editing phrase numbers 
@@ -375,6 +329,7 @@ enabled.
  B + C-Pad  Change cell value
  B + A      Clear cell value
  B + X      While held, C-Pad changes note length
+ B + Y      Insert note off
  X          Cycle selection modes
  Y          Open menu
  
@@ -396,6 +351,21 @@ Menu:
                         current lane
  Randomize slices   Changes ALL slice values
                     in the current lane
+
+Probability trigs (chance):
+
+ Note can be suppressed by a random chance by
+ entering numbers in the % column:
+
+ When the first digit is zero then the second
+ digit represents a percentage, i.e.
+ 05 means 50% and so on.
+
+ When the first digit is non-zero then the
+ note is played x out of y times.
+ 14 means play only the first time out of
+ every four cycles.
+
 
 Tracker companion view
 ----------------------

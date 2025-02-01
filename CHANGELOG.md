@@ -1,5 +1,29 @@
 https://keepachangelog.com/en/1.1.0/
 
+## 0.0.11
+
+### Added
+- Current octave is displayed in right-side status column
+- B + Y inserts a hard note off value (in contrast A + B changes the note length to current row)
+- "Tune to C" button in intstrument view - simple zero-crossing method, sometimes off by one note - not perfect
+- Pop-up dialog for downloading demo-samples appears at startup if the samples directory is empty
+
+### Changed
+- Changed initial reverb default value from 10 to 0
+- Matrix view displays phrase numbers in hex now and coarse edits offsets by 16
+- Renamed "Pattern Settings" screen to "Mono to Stereo Settings" and remove redundant controls
+- Hid obsolete Grid-Editor view and replaced "Assign" button with "Randomize all samples" button
+- Double tapping A shortcut for row-launching in clip-matrix view
+
+### Fixed
+- Shifting single note row with A+DPAD UP/DOWN does not work without selection sometimes
+- Row lengths don't update when inserting or removing row in matrix view
+- Bus-numbers display range started at zero, now starts a one
+- Notes are still played when erasing notes with L + Pad
+- Clearing a pattern un-assignes samples from instruments
+- Avoid handing reserved sample, pattern or instrument with zero index to the user (adjusted related functions in code)
+- Wrong tempo value shown in tempo-dialog
+
 ## 0.0.10
 
 ### Added
