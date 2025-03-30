@@ -193,6 +193,13 @@ SAMPLES - Plays a different sample sound
           per pad (the first 16 samples).
           Can be recorded.
 
+INSTRUMENTS - Assign different instruments to
+              pads with different values for
+              pitch, volume, Slice, Sample
+              and Lane.
+              See "Instrument Palette" section
+              for more information.
+
 When the "Assign" mode is on, the selected
 action is assigned to the A, X or Y button when
 pressed. This is useful to repeat a frequently
@@ -217,6 +224,50 @@ next bar when you play a sound.
 Rand All         Selects random samples for all
                  lanes.
 
+Instrument Palette
+------------------
+
+This screen let's you assign different
+instruments to each of the 12 pads and / or
+assign variations to these values:
+- Instrument number
+- Note (semitones)
+- Volume
+- Slice number
+- Sample number
+- Lane (track) to play on
+
+You can find the instrument palette inside the
+lower pad-screen and open it from the menu which
+appears when pressing the second button from the
+bottom left.
+
+Shortcuts while holding a pad:
+
+Pad + D-Left: Decrement instrument number
+Pad + D-Right: Increment instrument number
+
+Pad + D-Up: Start dragging a pad
+   When touch is released before D-Up then
+   a pop-up menu offers three operations:
+
+   COPY - Copies the dragged pad
+   SWAP - Exchanges the dragged and and dropped
+   CLONE - Clones the instrument to a free slot
+
+   When D-Up is released first then the last
+   operation is repeated without showing the
+   pop-up menu.
+
+Pad + D-Down: Shows the edit-menu
+   Here you can edit the Note, Volume etc.
+   A sound-preview is played Every time you change
+   a value.
+   Press B or D-Down again to close the menu.
+
+Cloning instruments allows you to make further
+variations like different loop-points or
+envelope settings etc. and record a performance.
 
 Recording audio from microphone
 -------------------------------
@@ -392,3 +443,39 @@ Buttons:
           across during playback
  Ginst    Selects any instrument the cursor comes 
           across while navigating
+
+Uploading samples/files through a web-browser
+---------------------------------------------
+Find and press the "Upload" button in the
+instrument view.
+
+Enter the shown ip-address into your browser on
+a PC or mobile phone.
+
+Here you can either drag and drop a single file
+or click "Choose File" and then click "Upload".
+
+The upload-directory depends on the file-type.
+wav and zip files go to "/nc/samples"
+cia files go to "/nc/cia"
+any other file goes to "/nc/upload"
+
+Zip-files are automatically extracted into the
+"/nc/samples" directory
+
+In my tests chrome was a lot faster than firefox.
+Uploading and extracting files can be fairly slow
+but may be quicker or more comfortable than
+physically moving the SD-Card to a computer.
+
+The 3DS file system implementation is slow
+when dealing with many files, such as a
+sample-library.
+
+A modern USB-3 SD-Card reader may be the best
+choice if you have a lot of files after all.
+
+This feature is intended to be used in your
+local Wifi network and has no security in mind
+whatsoever, you may not want to use it in a
+public network.

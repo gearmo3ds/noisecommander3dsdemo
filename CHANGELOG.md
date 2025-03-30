@@ -1,5 +1,26 @@
 https://keepachangelog.com/en/1.1.0/
 
+## 0.0.12
+
+### Added
+- HTTP upload feature (button): User can drag a file into a served web-page to transfer it to the 3DS console
+  - zip-files are automatically extracted to /nc/samples after uploading
+  - Uploading via Firefox seems much slower than via Chrome
+- Tracker + pads/piano screen combo, selectable by tapping D-PAD right twice
+- Bus FX screen can be access by tapping D-PAD left twice
+- New "Instrs" (palette ) mode - allows assigning instrument numbers to pads and record them to the current lane
+  - Different numbers can be assigned by holding the pad and pressing left/right on D-PAD
+  - Pressing Up on the D-PAD while holding a pad will start a drag session. A copy/swap/clone menu appears when dropping.
+  - Pressing D-Down while holding a pad will show a menu for overriding certain values:
+    - Pitch, Volume, Slice-number, sample-number and lane number
+
+### Changed
+- Ther user can no longer insert notes into phrase number zero
+- Allow sliding touch on piano to trigger different notes (needed to re-tap before)
+
+### Fixed
+- Muting via B+Pad does not stop sample like PAD + Dpad-UP does
+
 ## 0.0.11
 
 ### Added
