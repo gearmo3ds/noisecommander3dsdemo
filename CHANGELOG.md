@@ -1,5 +1,46 @@
 https://keepachangelog.com/en/1.1.0/
 
+## 0.0.13
+
+### Added
+- Ability to start/stop playback by pressing the START button (play current row when in clipmatrix view)
+- Doubled Master- and bus-effects so each deck has their own - uses more CPU
+- Decks can be disabled in DJ-Mixer view to allow reducing CPU usage temporarily
+- Decks are initially disabled until the user starts playack
+- Rudimentary playlist functionality in twin-file browser
+  - Press X and choose "New Playlist" in menu
+  - With an *.nsm file highlighted, press X again and choose either "Copy" or "Add to Playlist"
+  - Hold A + C-Pad Up/Down to re-order items inside the playlist
+  - Press Select to cycle the panel-view-types: FILES -> PLAYLIST -> SAMPLES (not implemented yet)
+  - Press A to load a song to the current deck as usual
+  - Press B to exit back to files mode and show the "/nc/playlists" directory
+  - The current playlist selection is persists, remembered during next app launch
+- Browser: Visual scroll-bars appear in long lists to indicate paging is possible (press L/R to page)
+- Browser: Pressing Y toggles deck selection
+- Browser: new functions: Dulicate, Rename, Create directory, Jump to opposite dir
+- Browser: The operations above support multi-selection but currently directories cannot be deleted or copied
+- Browser: Multiple rows can be selected by holding X and moving the circle-pad up/down
+- Header shows current deck's' loaded file name now
+
+### Changed
+- Doubled Master- and bus-effects so each deck has their own - uses more CPU
+- Toggling display in clipmatrix has been re-assigned to the L button
+- The right-hand status column now shows the currently playing row of track 1 
+- Audio init error now shows instructions on dumping DSP firmware to fix it
+- Browser: Switching side with circle-pad left/right now
+- Browser: Cursor now stays in position when paging with L/R fore more comfort
+- Browser: Pressing A when a .lst (playlist) file is selected opens it (switching to PLAYLIST panel type)
+- Browser: Copying large files is now slightly faster
+- Browser: Shows warning when attempting to load song into deck which it playing and audible (crossfader not off)
+
+### Removed
+- Opening a project or creating a project no longer auto-plays the deck (must press Start now)
+- Start button no longer cycles pages in instrument view, use B+Circle pad instead.
+
+### Fixed
+- DJMixer view: Both "Deck Gain" sliders affect only the selected deck instead of respective side
+
+
 ## 0.0.12
 
 ### Added
@@ -35,6 +76,9 @@ https://keepachangelog.com/en/1.1.0/
 - Renamed "Pattern Settings" screen to "Mono to Stereo Settings" and remove redundant controls
 - Hid obsolete Grid-Editor view and replaced "Assign" button with "Randomize all samples" button
 - Double tapping A shortcut for row-launching in clip-matrix view
+- Piano: Triggering notes by sliding is now optional and is initially disabled
+  - It can be toggled by pressing DPAD UP while a touching any piano key
+  - It's disabled by default because notes tend to double-trigger when playing quickly
 
 ### Fixed
 - Shifting single note row with A+DPAD UP/DOWN does not work without selection sometimes

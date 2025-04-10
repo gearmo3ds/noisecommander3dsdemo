@@ -27,6 +27,7 @@ Select + DPAD   Select different bottom screen
 Circle Pad      Move cursor (Upper screen)
 A               Do stuff
 B               Cancel stuff / return
+Start           Starts or stops playback (toggle)
 
 
 Project screen
@@ -49,21 +50,34 @@ To stop recording press A again, it is a toggle.
 the current length of the recording.
 
 
-Loading samples via Twin Browser
+Twin Browser
 --------------------------------
-A      Open file-operation Dialog (or load sample)
+A      Load/Execute file (song, wav etc.)
 B      Move to parent directory
 Y      Switch to other side
-X      Multi selection (not yet supported)
+X      Show file operation menu (copy etc.)
 L / R  Navigate page-wise
+Select Cycles through panel-types
 
-Press the D-Pad down twice. You should see the
+Press the D-Pad down once. You should see the
 twin-file browser in the top screen.
 
 Here you can simply navigate to a wav file and 
 press A to load it.
 
 Songs can be loaded the same way.
+
+
+Playlists
+------------------------------
+Playlists can be created via the browser
+file operation menu.
+The copy operation can be used to add entries.
+
+Holding A allows to move the selected entry
+up or down.
+
+Pressing A loads the selected song entry.
 
 
 Loading random samples (Categories View):
@@ -138,7 +152,7 @@ Pad + Left      Select previous sound
 Pad + Right     Select next sound
 Pad + Up        Solo pad sound
 Pad + Down      Mute pad sound
-Select          Cycle slider pages
+B + C-Pad       Cycle slider pages
 A               Execute selected button (if any)
 A + C-Pad       Change value at cursor
 B               Toggle pad mute state
@@ -306,11 +320,13 @@ paste the value again.
  B + CPAD   Change cell values (phrase)
  X          Cycle selection modes (cursor / all tracks)
  Y          Open menu
- Start      Toggle between editing phrase numbers 
+ L          Toggle between editing phrase numbers 
             or clip length
  Select     Toggle row continue
             Off: Repeat the current row clip
             On: Play next row of island
+ Start      Toggle playback     
+ 
 
 Menu:
 
