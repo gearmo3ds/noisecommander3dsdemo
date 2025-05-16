@@ -1,5 +1,64 @@
 https://keepachangelog.com/en/1.1.0/
 
+## 0.0.14
+
+### Added
+- New Bus- and Master lanes in tracker- and clipmatrix view for automating effects and volumes
+- Fade-commands for lane/bus-volume and bus-filter for long fades can be accessed with B + D-UP/D-DOWN
+  - Available commands (upper case letter): fade (I)n, fade (O)ut,  set (T)arget,  slide (U)p,  slide (D)own,  (S)top
+  - The time-unit is amount of steps, so larger values result in longer fades and vice versa
+  - Only available on the lane-volume, bus-volume and bus-filter-cutoff columns (more to come)
+- Filter type option in Bus view: State Variable Filter LP/BP/HP and Biquad LP/BP/HP
+- Preliminary Filter-Cutoff Sine-LFO per bus with amount and rate setting
+- CIA files can now be installed from the file browser (press A when selected)
+- Extremely simple waveform-view with truncating function (removes everything before or after the cursor)
+- Factotum: Looper with pitch-shifting and time-stretching as a master effect. Work in progress.
+- Parameter-columns can now be dynamically shown or hidden via B + D-LEFT (opens a menu)
+- Pitch sliding (portamento): When a note has no instrument value, it will slide to the new note
+- Pitch envelope (WIP) in third page of instrument-view
+- The time can be set via the PSlide instrument attribute and automated via the new "GL" tracker-column
+- Added cross-fade button, produces seamless loop by fading the first half into the second
+- Tracker: An entire row can now be deleted by holding B and pressing A twice when the note e column is active
+- Log-widget (open with Select + DDOWN)
+- Rotary stepped-mode (toggle w. DLEFT while holding) - snaps to coarse parameter values
+- Euclidean / Tracker screen-combo to allow selecting tracks quickly (press D-Right three times to show)
+- B + DPAD-Left allows to choose which columns are displayed per individual lane
+- Clip-lengths in clip-launch-matrix view are now shown as hex values
+- Decimal value is shown in status-line when user changes hex-values
+- "Insert Note Stops" (to first call if doesn't hold a note') option in tracker menu - to stop notes of previous pattern
+- "Apply mutes" option in clipmatrix-menu: Assigns clip zero to all muted lanes and unmutes the
+- "Double/Halve content length" options to clipmatrix- and tracker menus
+
+### Changed
+- Volume levels change! A square-law curve is now applied to make fades perceived more evenly for humans
+- File browser: Directories can now be recursively copied or deleted
+- Tracker: Follow is disabled when transport is stopped to avoid confusion (user could not move cursor)
+- Tracker: Follow is now initially disabled (enable by pressing A)
+- Tracker: Can now edit multiple values in selection mode
+- Tracker: Value-insertion waits for button B release, to avoid unwanted insertions (less confusing)
+- Tracker: Releasing B on empty cell inserts previous value except if user moved to a different column, then it's the 'default value
+- Tracker: Pressing B + A now deletes the selected values as you would expect
+- Tracker: Moving left when on the left most lane+column the cursor no longer wraps to the right-most column
+- Tracker: Horizontal scrolling changed internally
+- ClipMatrix: B + A clears selection or current cell like in tracker
+- ClipMatrix: Replaced "Duplicate uniquely" with "Duplicate slots unique" and "Duplicate instr unique"
+- Tracker/ClipMatrix: No longer pasting at cursor x-position if clipboard is from entire row but at 0 instead
+- Drum pad selection reflects tracker-lane selection changes (and vice versa as before)
+- Bus-number is displayed at top-right in drum pads 
+
+### Fixed
+- Send effects on bus 4 have no effect
+- A loop end-point at the last frame produces a click because the interpolation reaches out of range
+  - It means that single cycle samples can now be used, useful for chip-tunes
+- Moving a selection upwards would cause a freeze when moved beyond the first row
+- Flickering playhead in tracker-view during playback
+- Cannot insert value with B + C-Left (only C-Right worked)
+- Visual glitch in selection drawing where the cell before the value had differnt color
+- Entering and exiting the Rosalina menu freezes the console, due to framebuffer grab? (Still wonky but no more freezing)
+- Interpolating in row-selection mode freezes the app, now does nothing instead (supports only column mode)
+- Trig condition: x out of x triggers every time
+- Http data leaks into file uploads via curl and corrupts them
+
 ## 0.0.13
 
 ### Added

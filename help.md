@@ -30,10 +30,25 @@ B               Cancel stuff / return
 Start           Starts or stops playback (toggle)
 
 
+Rotary sliders
+--------------
+Rotary sliders are manipulated by moving the
+finger/stylus around the center of the bottom
+screen.
+
+Clock-wise to increase the value and anti-
+clock-wise to decrease the value.
+
+While touching, pressing LEFT on the D-Pad
+toggles a coarse-snapping mode that can help
+setting sane values for the track's length
+(multiples of four) quickly.
+
+
 Project screen
 --------------
-Press the DPAD down to show the Project screen 
-(at the top).
+Press the DPAD down twice to show the Project 
+screen (at the top).
 
 The project of the currently selected deck (A/B)
 can be saved, loaded or a new project can be 
@@ -66,6 +81,8 @@ Here you can simply navigate to a wav file and
 press A to load it.
 
 Songs can be loaded the same way.
+
+CIA files can be installed this way too.
 
 
 Playlists
@@ -374,6 +391,9 @@ column abbreviations. The full column name is
 displayed in the status-bar at the bottom of the 
 top screen when a column is selected.
 
+Values are inserted and changed by holding B
+and moving the Circle-Pad.
+
 Columns are only selectable when the "Column 
 select mode" is enabled.
 
@@ -382,25 +402,25 @@ selected.
 Pressing B after selecting another cell will 
 paste the value again.
 
-**Tip**: Press Select + DPAD right to show the 
-Pads view on the bottom screen with the tracker 
-view at the top screen.
-
-Now you can use the pads or the piano to insert 
+You can use the pads or the piano to insert 
 notes to specific locations. Make sure that the 
 pattern follow mode is off (A) and REC is 
 enabled.
 
+There are 12 regular lanes, 4 Bus-lanes and one
+master lane.
+
  A          Toggle playhead follow mode
  B          Insert last value or escape selection
  B + C-Pad  Change cell value
- B + A      Clear cell value
+ B + A      Clear cell value (twice for row)
  B + X      While held, C-Pad changes note length
  B + Y      Insert note off
  X          Cycle selection modes
  Y          Open menu
  
  L          Toggle compact mode (only notes)
+ R          Switch deck selection
  A + B      Set note length to cursor
  A + C-Pad  Up/Down shift cell(s)
  A + D-Pad  Left/Right moves the lane (reorder)
@@ -418,6 +438,15 @@ Menu:
                         current lane
  Randomize slices   Changes ALL slice values
                     in the current lane
+ Clear Phrase Deletes all notes & events
+              of the lane to start fresh
+ Insert Note Stops can help to prevent notes
+              from previous pattern to play
+ Double content length increases the phrase
+              length and copies the first 
+              halve into the second
+ Halve content length does the Opposite
+ 
 
 Probability trigs (chance):
 
@@ -432,6 +461,66 @@ Probability trigs (chance):
  note is played x out of y times.
  14 means play only the first time out of
  every four cycles.
+
+Fades:
+
+Certain columns of the lanes allow for
+long fades with this set of commands which
+can be inserted by holding B and pressing
+UP/DOWN on the D-Pad:
+
+(I) - Fade In
+(O) - Fade Out
+(U) - Fade Up
+(D) - Fade Down
+(T) - Set Limiting Target
+(S) - Stop fading
+
+Columns which support fade commands:
+- (CV) : Channel Volume
+- (B1) : Bus Volume
+- (FC) : Bus Filter Cutoff
+
+The values are in step (32th) units.
+Larger values result in longer fades.
+
+
+Selection:
+
+Tap Y once to select a range within the current
+lane. 
+
+Tay Y again (e.g. twice) to select a range
+for all lanes.
+
+Holding B and moving the circle pad changes
+the values of all selected cells.
+
+Holding A + circle pad UP/DOWN shifts the 
+selected cells.
+
+Holding Y and pressing UP/DOWN on the D-Pad
+selects everything above or below.
+
+
+Pitch Slides (Portamento):
+
+When a row has a note-value without an
+instrument-value (IN), then the pitch will
+slide gradually to the new value.
+
+The speed-rate is determined by the "PSlide"
+value of the instrument or the "GL" column-
+value in the same row.
+
+
+Lane Columns:
+
+Parameters can be automated by by inserting 
+values into their respective columns.
+
+Columns can be shown or hidden by pressing
+B + D-LEFT and toggling items in a menu.
 
 
 Tracker companion view
@@ -459,6 +548,7 @@ Buttons:
           across during playback
  Ginst    Selects any instrument the cursor comes 
           across while navigating
+
 
 Uploading samples/files through a web-browser
 ---------------------------------------------
@@ -495,3 +585,16 @@ This feature is intended to be used in your
 local Wifi network and has no security in mind
 whatsoever, you may not want to use it in a
 public network.
+
+
+Waveform view
+---------------------------------------------
+Press right a few times to see the waveform-
+view. It displays the currently active sample.
+
+Touch     - Moves the cursor
+A         - Plays sample from cursor position
+C-Up/Down - Zooms in/Out
+C-Left/Right - Pans the view when zommed
+X         - Trims cursor-left audio
+Y         - Trims cursor-right audio
