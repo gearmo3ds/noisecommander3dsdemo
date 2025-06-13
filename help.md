@@ -45,6 +45,398 @@ setting sane values for the track's length
 (multiples of four) quickly.
 
 
+Loading samples quickly
+-----------------------
+Press D-Down to open the browser.
+Select a wav-file and press A to load and assign it 
+to the currently loaded pad.
+
+
+Setting the Tempo
+-----------------
+The tempo can be set in the Instrument View.
+It is a button in the middle of the upper screen.
+Use the C-Pad to select it, then press A.
+It will open a popup-dialog.
+
+
+Instrument / Drum-Pad screen
+----------------------------
+Pad             Play/Select sound
+L + Pad         Erases notes while held
+R               Select other Deck
+Pad + C-Pad     Change value
+Pad + Left      Select previous sound
+Pad + Right     Select next sound
+Pad + Up        Solo pad sound
+Pad + Down      Mute pad sound
+B + C-Pad       Cycle slider pages
+A               Execute selected button (if any)
+A + C-Pad       Change value at cursor
+B               Toggle pad mute state
+Y               Play sound
+X               Reset slider value
+
+Touch pads to play their sound.
+
+Enable REC and play the pads to insert notes into 
+the sequencer.
+
+Disable "Play" to select pads without playing 
+them (found at bottom right side).
+
+There are three types of selectable items in the 
+upper screen:
+Sliders, buttons and lanes (pads). 
+
+To change a slider value, first select it and 
+then do either:
+
+A) Hold the A button while moving the Circle Pad.
+B) Touch a pad on the lower screen while moving 
+   the Circle Pad.
+
+To execute a Button, just press A.
+
+The A, X and Y buttons do different things 
+depending on the cursor selection.
+
+Pressing such a button while a lane is selected 
+by the cursor will trigger an action which 
+opererates on the lane (pad).
+
+Pressing such a button while a slider is 
+selected: (TODO: explain).
+
+The second of the four bottom row buttons cycles
+through several modes:
+
+ROLL - Repeats notes in a short loop while pad
+       is pressed.
+       
+SLICES - Plays the current sound at different 
+         starting points.
+         Can be recorded.
+         
+PIANO - Plays sounds in chromatic pitches.
+        Can be recorded.
+
+SAMPLES - Plays a different sample sound
+          per pad (the first 16 samples).
+          Can be recorded.
+
+INSTRUMENTS - Assign different instruments to
+              pads with different values for
+              pitch, volume, Slice, Sample
+              and Lane.
+              See "Instrument Palette" section
+              for more information.
+
+When the "Assign" mode is on, the selected
+action is assigned to the A, X or Y button when
+pressed. This is useful to repeat a frequently
+used actions.
+
+The assignments are currently not yet saved
+and will revert when you re-open the app.
+
+This will change in the future and more
+assignable combinations will be available.
+
+The "Ln All",  "Ln Bus" and "Ln Sel" modes at the
+right side set the lane-context for certain 
+actions.
+This is currently only supported by the sample-
+selection actions.
+
+The "Intrupt" function will temporarily mute
+all other lanes and unmute them again at the 
+next bar when you play a sound.
+
+Rand All         Selects random samples for all
+                 lanes.
+
+
+Tracker View
+------------
+
+Press right on the DPAD to see.
+
+The top row displays the lane number and the 
+column abbreviations. The full column name is 
+displayed in the status-bar at the bottom of the 
+top screen when a column is selected.
+
+Values are inserted and changed by holding B
+and moving the Circle-Pad.
+
+Columns are only selectable when the "Column 
+select mode" is enabled.
+
+A single cell can be copied by pressing B while 
+selected. 
+Pressing B after selecting another cell will 
+paste the value again.
+
+You can use the pads or the piano to insert 
+notes to specific locations. Make sure that the 
+pattern follow mode is off (A) and REC is 
+enabled.
+
+There are 12 regular lanes, 4 Bus-lanes and one
+master lane.
+
+ L          Toggle wide / narrow view
+ R          Switch deck selection
+ 
+ A          Toggle playhead follow mode
+ B          Insert last value or escape selection
+ B + C-Pad  Change cell value
+ B + A      Clear cell value (twice for row)
+ B + Y      Insert note off
+ X          Cycle selection modes
+ Y          Open menu
+ 
+ A + B      Set note length to cursor
+ A + C-Pad  Move cells Up/Down
+ A + D-Pad  Left/Right moves the lane (disabled)
+ Y + X      Set phrase length
+ Y + C-Pad  Page up/down or jump to top/bottom
+ Y + D-Up   Page up by 16 steps
+ Y + D-Down Page down by 16 steps
+ Y + D-Left Jump to top
+ Y + D-Righ Jump to bottom
+ 
+ Start      Toggle playback     
+ Select     Toggle loop row mode
+            On: Repeats the current row clip
+            Off: Plays next row of island
+Menu:
+
+ Copy         Copy selection
+ Paste        Paste selection
+ Cut          Copy and clear selection
+ Duplicate    Copy and paste selection to next row
+ Interpolate  Fills gaps between every value in 
+              the selected columns with 
+              interpolated values
+              
+ Insert linear slices   
+               Adds slice notes to
+               current lane
+                        
+ Randomize slices   
+              Changes ALL slice values
+              in the current lane
+                    
+ Clear Phrase Deletes all notes & events
+              of the lane to start fresh
+              
+ Insert Note Stops 
+              can help to prevent notes
+              from previous pattern to play
+              
+ Double content length 
+              Increases the phrase
+              length and copies the first 
+              halve into the second
+              
+ Halve content length 
+              does the Opposite
+ 
+
+Probability trigs (chance):
+
+ Note can be suppressed by a random chance by
+ entering numbers in the % column:
+
+ When the first digit is zero then the second
+ digit represents a percentage, i.e.
+ 05 means 50% and so on.
+
+ When the first digit is non-zero then the
+ note is played x out of y times.
+ 14 means play only the first time out of
+ every four cycles.
+
+Fades:
+
+Certain columns of the lanes allow for
+long fades with this set of commands which
+can be inserted by holding B and pressing
+UP/DOWN on the D-Pad:
+
+(I) - Fade In
+(O) - Fade Out
+(U) - Fade Up
+(D) - Fade Down
+(T) - Set Limiting Target
+(S) - Stop fading
+
+Columns which support fade commands:
+- (CV) : Channel Volume
+- (B1) : Bus Volume
+- (FC) : Bus Filter Cutoff
+
+The values are in step (32th) units.
+Larger values result in longer fades.
+
+
+Selection:
+
+Tap Y once to select a range within the current
+lane. 
+
+Tay Y again (e.g. twice) to select a range
+for all lanes.
+
+Holding B and moving the circle pad changes
+the values of all selected cells.
+
+Holding A + circle pad UP/DOWN shifts the 
+selected cells.
+
+Holding Y and pressing UP/DOWN on the D-Pad
+selects everything above or below.
+
+
+Pitch Slides (Portamento):
+
+When a row has a note-value without an
+instrument-value (IN), then the pitch will
+slide gradually to the new value.
+
+The speed-rate is determined by the "PSlide"
+value of the instrument or the "GL" column-
+value in the same row.
+
+
+Lane Columns:
+
+Parameters can be automated by by inserting 
+values into their respective columns.
+
+Columns can be shown or hidden by pressing
+B + D-LEFT and toggling items in a menu.
+
+
+Clip Matrix View
+----------------
+
+Press up on the DPAD to see.
+
+Active cells are displayed in green.
+
+A cell that is about to launch pulsates in green.
+
+When multiple cells refer to a shared phrase 
+number, their color becomes red.
+
+A single cell can be copied by pressing B while 
+selected. Pressing B after selecting another cell will 
+paste the value again.
+
+ CPAD       Move cursor
+ A          launch cell (phrase)
+ AA         Launch entire row
+ B + DRIGHT launch entire row
+ A+C-Up/Dn  Shift selected cells
+ B          Insert last value to cell
+            Cancel selection
+ B + CPAD   Change cell values (phrase)
+ X          Cycle selection modes (single | all)
+ X+C-Up/Dn  Select above or below
+ Y          Open menu
+ L          Toggle between editing phrase numbers 
+            or clip length
+ Start      Toggle playback     
+ Select     Toggle loop row mode
+            On: Repeats the current row clip
+            Off: Plays next row of island
+ B + Pad    Toggle lane mute-state
+ Y + X      Set clip length
+
+Menu:
+
+ Insert Row Above   Inserts a row ABOVE the 
+                    currently selected row
+ Insert Row Below   Inserts a row ABOVE the 
+                    currently selected row 
+ Delete Row         Deletes the current row
+ Copy               Copies the rectangular 
+                    selection
+ Paste              Pastes the rectangular 
+                    selection at the cursor
+ Rotate             Not yet fully implemented
+ Duplicate          Same as copy & paste to next 
+                    row
+ Toggle continue    Cells normmaly cycle 
+                    downwards but repeat the 
+                    current when this is disabled
+ Capture as new     Enters currently playing 
+                    phrase numbers to the current
+                    row (override)
+ Assign New Pattern Fills current row cells with
+                    un-used phrase numbers
+ Make unique        Copies every selected phrase 
+                    into a unique slot to allow 
+                    editing non-destructively 
+                    afterwards (de-dupe)
+ Make instr unique  Clones the instruments used 
+                    in the selected phrases to 
+                    allow editing 
+                    non-destructively afterwards
+ Remove duplicates  Opposite of make unique, 
+                    replaces all phrases which 
+                    have identical content
+ Duplicate slots unique
+                    Duplicates row and makes 
+                    phrases unique
+ Duplicate instr unique
+                    Same as above but also 
+                    clones the instruments
+ Duplicate uniquely Duplicates the current row 
+                    and makes both, phrases 
+                    and instruments unique
+ Apply mutes        Replaces muted cells with
+                    phrase nr zero and un-mutes
+                    them
+ Double content length
+                    Duplicates notes etc. to
+                    make the phrase twice as 
+                    long
+ Halve content length
+                    Makes phrase half as long
+
+
+
+Tracker companion view
+----------------------
+
+This view is a very crude placeholder and needs 
+to be fleshed out or replaced in the future
+
+Allows setting the current clip- and phrase 
+length.The phrase loops for the duration of the 
+clip length.
+
+Buttons:
+
+ Follow   Same as pressing A, toggles cursor 
+          following phrase playback
+ Cmpct    Same as pressing L toggles compact mode
+ SlCol    Toggles ability to selected individual 
+          columns, else only lanes are selectable
+ Loop     Does nothing, not implemented, apologies
+ Mouse    Allows moving the cursor like a mouse or 
+          trackpad. Use the CPAD at the same time 
+          to nagivate even faster
+ Pinst    Selects any instrument the cursor comes 
+          across during playback
+ Ginst    Selects any instrument the cursor comes 
+          across while navigating
+
+
 Project screen
 --------------
 Press the DPAD down twice to show the Project 
@@ -151,110 +543,6 @@ go to the Instrument screen and change the
 "Category" value.
 
 
-Setting the Tempo
------------------
-The tempo can be set in the Instrument View.
-It is a button in the middle of the upper screen.
-Use the C-Pad to select it, then press A.
-It will open a popup-dialog.
-
-
-Instrument / Pad screen
------------------------
-Pad             Play/Select sound
-L + Pad         Erases notes while held
-R               Select other Deck
-Pad + C-Pad     Change value
-Pad + Left      Select previous sound
-Pad + Right     Select next sound
-Pad + Up        Solo pad sound
-Pad + Down      Mute pad sound
-B + C-Pad       Cycle slider pages
-A               Execute selected button (if any)
-A + C-Pad       Change value at cursor
-B               Toggle pad mute state
-Y               Play sound
-X               Reset slider value
-
-Touch pads to play their sound.
-
-Enable REC and play the pads to insert notes into 
-the sequencer.
-
-Disable "Play" to select pads without playing 
-them (found at bottom right side).
-
-There are three types of selectable items in the 
-upper screen:
-Sliders, buttons and lanes (pads). 
-
-To change a slider value, first select it and 
-then do either:
-
-A) Hold the A button while moving the Circle Pad.
-B) Touch a pad on the lower screen while moving 
-   the Circle Pad.
-
-To execute a Button, just press A.
-
-The A, X and Y buttons do different things 
-depending on the cursor selection.
-
-Pressing such a button while a lane is selected 
-by the cursor will trigger an action which 
-opererates on the lane (pad).
-
-Pressing such a button while a slider is 
-selected: (TODO: explain).
-
-The second of the four bottom row buttons cycles
-through several modes:
-
-ROLL - Repeats notes in a short loop while pad
-       is pressed.
-       
-SLICES - Plays the current sound at different 
-         starting points.
-         Can be recorded.
-         
-PIANO - Plays sounds in chromatic pitches.
-        Can be recorded.
-
-SAMPLES - Plays a different sample sound
-          per pad (the first 16 samples).
-          Can be recorded.
-
-INSTRUMENTS - Assign different instruments to
-              pads with different values for
-              pitch, volume, Slice, Sample
-              and Lane.
-              See "Instrument Palette" section
-              for more information.
-
-When the "Assign" mode is on, the selected
-action is assigned to the A, X or Y button when
-pressed. This is useful to repeat a frequently
-used actions.
-
-The assignments are currently not yet saved
-and will revert when you re-open the app.
-
-This will change in the future and more
-assignable combinations will be available.
-
-The "Ln All",  "Ln Bus" and "Ln Sel" modes at the
-right side set the lane-context for certain 
-actions.
-This is currently only supported by the sample-
-selection actions.
-
-The "Intrupt" function will temporarily mute
-all other lanes and unmute them again at the 
-next bar when you play a sound.
-
-Rand All         Selects random samples for all
-                 lanes.
-
 Instrument Palette
 ------------------
 
@@ -300,6 +588,7 @@ Cloning instruments allows you to make further
 variations like different loop-points or
 envelope settings etc. and record a performance.
 
+
 Recording audio from microphone
 -------------------------------
 
@@ -312,242 +601,6 @@ Instrument view.
 
 The new sample is immediately assigned to the 
 current instrument lane to play with.
-
-Clip Matrix View
-----------------
-
-Press up on the DPAD to see.
-
-Active cells are displayed in green.
-
-A cell that is about to launch pulsates in green.
-
-When multiple cells refer to a shared phrase 
-number, their color becomes red.
-
-A single cell can be copied by pressing B while 
-selected. Pressing B after selecting another cell will 
-paste the value again.
-
- CPAD       Move cursor
- A          launch cell (phrase)
- AA         Launch entire current row
- B + A      Launch entire current row
- B          Insert last value to cell
- B + CPAD   Change cell values (phrase)
- X          Cycle selection modes (cursor / all tracks)
- Y          Open menu
- L          Toggle between editing phrase numbers 
-            or clip length
- Select     Toggle row continue
-            Off: Repeat the current row clip
-            On: Play next row of island
- Start      Toggle playback     
- 
-
-Menu:
-
- Insert Row         Inserts a row ABOVE the 
-                    currently selected row|
- Delete Row         Deletes the current row
- Copy               Copies the rectangular 
-                    selection
- Paste              Pastes the rectangular 
-                    selection at the cursor
- Rotate             Not yet fully implemented
- Duplicate          Same as copy & paste to next 
-                    row
- Toggle continue    Cells normmaly cycle 
-                    downwards but repeat the 
-                    current when this is disabled
- Capture as new     Enters currently playing 
-                    phrase numbers to the current
-                    row (override)
- Insert next free   Finds and insert the next 
-                    unused / empty phrase number 
-                    to the current cell
- Make unique        Copies every selected phrase 
-                    into a unique slot to allow 
-                    editing non-destructively 
-                    afterwards (de-dupe)
- Make instr unique  Clones the instruments used 
-                    in the selected phrases to 
-                    allow editing 
-                    non-destructively afterwards
- Remove duplicates  Opposite of make unique, 
-                    replaces all phrases which 
-                    have identical content
- Duplicate uniquely Duplicates the current row 
-                    and makes both, phrases 
-                    and instruments unique
-
-Tracker View
-------------
-
-Press right on the DPAD to see.
-
-The top row displays the lane number and the 
-column abbreviations. The full column name is 
-displayed in the status-bar at the bottom of the 
-top screen when a column is selected.
-
-Values are inserted and changed by holding B
-and moving the Circle-Pad.
-
-Columns are only selectable when the "Column 
-select mode" is enabled.
-
-A single cell can be copied by pressing B while 
-selected. 
-Pressing B after selecting another cell will 
-paste the value again.
-
-You can use the pads or the piano to insert 
-notes to specific locations. Make sure that the 
-pattern follow mode is off (A) and REC is 
-enabled.
-
-There are 12 regular lanes, 4 Bus-lanes and one
-master lane.
-
- A          Toggle playhead follow mode
- B          Insert last value or escape selection
- B + C-Pad  Change cell value
- B + A      Clear cell value (twice for row)
- B + X      While held, C-Pad changes note length
- B + Y      Insert note off
- X          Cycle selection modes
- Y          Open menu
- 
- L          Toggle compact mode (only notes)
- R          Switch deck selection
- A + B      Set note length to cursor
- A + C-Pad  Up/Down shift cell(s)
- A + D-Pad  Left/Right moves the lane (reorder)
-
-Menu:
-
- Copy         Copy selection
- Paste        Paste selection
- Cut          Copy and clear selection
- Duplicate    Copy and paste selection to next row
- Interpolate  Fills gaps between every value in 
-              the selected columns with 
-              interpolated values
- Insert linear slices   Adds slice notes to
-                        current lane
- Randomize slices   Changes ALL slice values
-                    in the current lane
- Clear Phrase Deletes all notes & events
-              of the lane to start fresh
- Insert Note Stops can help to prevent notes
-              from previous pattern to play
- Double content length increases the phrase
-              length and copies the first 
-              halve into the second
- Halve content length does the Opposite
- 
-
-Probability trigs (chance):
-
- Note can be suppressed by a random chance by
- entering numbers in the % column:
-
- When the first digit is zero then the second
- digit represents a percentage, i.e.
- 05 means 50% and so on.
-
- When the first digit is non-zero then the
- note is played x out of y times.
- 14 means play only the first time out of
- every four cycles.
-
-Fades:
-
-Certain columns of the lanes allow for
-long fades with this set of commands which
-can be inserted by holding B and pressing
-UP/DOWN on the D-Pad:
-
-(I) - Fade In
-(O) - Fade Out
-(U) - Fade Up
-(D) - Fade Down
-(T) - Set Limiting Target
-(S) - Stop fading
-
-Columns which support fade commands:
-- (CV) : Channel Volume
-- (B1) : Bus Volume
-- (FC) : Bus Filter Cutoff
-
-The values are in step (32th) units.
-Larger values result in longer fades.
-
-
-Selection:
-
-Tap Y once to select a range within the current
-lane. 
-
-Tay Y again (e.g. twice) to select a range
-for all lanes.
-
-Holding B and moving the circle pad changes
-the values of all selected cells.
-
-Holding A + circle pad UP/DOWN shifts the 
-selected cells.
-
-Holding Y and pressing UP/DOWN on the D-Pad
-selects everything above or below.
-
-
-Pitch Slides (Portamento):
-
-When a row has a note-value without an
-instrument-value (IN), then the pitch will
-slide gradually to the new value.
-
-The speed-rate is determined by the "PSlide"
-value of the instrument or the "GL" column-
-value in the same row.
-
-
-Lane Columns:
-
-Parameters can be automated by by inserting 
-values into their respective columns.
-
-Columns can be shown or hidden by pressing
-B + D-LEFT and toggling items in a menu.
-
-
-Tracker companion view
-----------------------
-
-This view is a very crude placeholder and needs 
-to be fleshed out or replaced in the future
-
-Allows setting the current clip- and phrase 
-length.The phrase loops for the duration of the 
-clip length.
-
-Buttons:
-
- Follow   Same as pressing A, toggles cursor 
-          following phrase playback
- Cmpct    Same as pressing L toggles compact mode
- SlCol    Toggles ability to selected individual 
-          columns, else only lanes are selectable
- Loop     Does nothing, not implemented, apologies
- Mouse    Allows moving the cursor like a mouse or 
-          trackpad. Use the CPAD at the same time 
-          to nagivate even faster
- Pinst    Selects any instrument the cursor comes 
-          across during playback
- Ginst    Selects any instrument the cursor comes 
-          across while navigating
 
 
 Uploading samples/files through a web-browser
