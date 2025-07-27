@@ -1,5 +1,64 @@
 https://keepachangelog.com/en/1.1.0/
 
+## 0.1.0
+
+### Added
+- WiFi-Midi support via DSMI and custom VST3 plugin made with Juce
+  - Supports note-, control-change and program-change events (no clock nor sysex)
+  - User needs to compile and install either [DSMI](https://github.com/gearmo3ds/dsmi) or the [Juce VST3 plugin](https://github.com/gearmo3ds/NoiseCommander3DSMidi)
+  - When using DSMI you'll need to disable and enable midi in the settings to send a discovery signal
+  - When using the VST3, click on "Discover 3DS" and then press/tap "Discover VST3 Server" in NC 
+    - It should find the right ip-address after a couple seconds. If not, the addresses can be manually be set in both sides
+  - Caveat: NC has a fixed audio latencty of 43ms. Midi out events are delayed by this amount to stay in sync    
+  - Program changes are only sent when the value changed, equal values and are not sent repeatedly but only once
+- A midi-channel 1-16 can now be selected for each lane (0 means disabled) and the setting persists within the song file
+- Midi note-on events use the instrument volume value as velocity
+- Five Midi CC lanes for sending messages to external gear (hidden by default, unhide in column menu B+DLeft in tracker view)
+- New "midi.cfg" file allows configuring up to 10 CCs for up to 10 midi out devices via text
+- The first five Midi CCs can be configured in the Midi Settings UI
+- "Fill to clip length" option in tracker menu and "Fill" in set length dialog
+- New "Delay" column in lane allows for "micro-timing", delays note and overwrites swing delay for the given note
+- New "Retrig" column: Repeats note x times or if >= 0x20 then digits are amount and number of steps (use for triplets)
+- New "BusNr" column to animate the bus-output assignment
+- "Set content length" in tracker menu shows the assigned shortcut (B + D-Left)
+- Rotary sliders for quick insertion of row-values (volume, probability, repeats etc.)
+- 16 Levels screen: Each pad plays current instrument at different volume
+- Repeat screen: Plays held pad repeatedly, pressing D-Pad while held changes frequency
+- Notes screen: Each pad plays a fixed note (may offer different scales in the future here)
+- "Dedupe All Instruments" entry in clip-matrix menu, collapses duplicate instruments to one
+- New buttons for managing column visibility: Show used, all, none, default
+- "Delete" menu entry in instrument palette, deletes instrument and clears palette slot
+- Looper: "xfade" slider cross-fades between dry and wet
+- Looper: "Synced" button starts recording at next bar and stops after 1 or 2 bars (according to "bars" setting)
+- Looper: "bars" setting allows up to two bars if the tempo is greater or equal to 88 BPM, else only one bar (512k limit)
+- Looper: "Automix" toggle sets dry when starting recording and wet when recording finishes
+- Looper: "Overdub" toggle - does what you expect
+- Looper: Momentary "Reverse" button 
+- Looper: Rate slider resets when releasing to allow performing a a tape stop effect of sorts
+- Looper: "Capture" saves the loop sample into the song as new instrument (Disabled in Demo version)
+- Renamed bottom right button label from "Select/Play" to "Silent" in pad/performance view for clarity
+- Quantization slider in general settings for changing all lanes at once (temporary solution)
+
+### Changed
+- Partly new color scheme, thanks to Keffu for submitting/suggesting
+- New functions in help: Pressing X shows Shortcuts list for current upper view and pressing Y for current lower view
+- Pressing Select in help view toggles "Auto-Show" mode which jumps to the upper screens shortcut list whenever help is opened
+- Empty pads show black color in instrument palette, all but first are now initialized as empty
+- Tracker lanes now show the phrase- and clip lengths at the bottom
+- Copy/pasting single notes with the B-button in compact tracker-view now copies all row values
+- Increasing phrase length also grows clip length but not the other way around (does not shrink)
+- Column visibilities now persist, stored in file
+- D-Pad functions now repeat when held in help view
+
+### Fixed
+- Copy/paste operations exclude columns other than note in narrow/compact tracker view mode
+- Note-stops turn into notes when transposing selection by holding B+C-Pad direction
+- Menu no longer opens after inserting a note-stop with B + Y
+- Waveform display now supports 8Bit samples
+
+### Removed
+- "Set Lenghts" menu entry from clip-matrix menu as it seems broken
+
 ## 0.0.15
 
 ### Added

@@ -20,8 +20,8 @@ D-Pad      Left/right to page
 B          Exit
 
 
-General:
---------
+General Shortcuts:
+------------------
 DPAD            Select different screens
 Select + DPAD   Select different bottom screen
 Circle Pad      Move cursor (Upper screen)
@@ -60,22 +60,63 @@ Use the C-Pad to select it, then press A.
 It will open a popup-dialog.
 
 
-Instrument / Drum-Pad screen
-----------------------------
+Instrument View Shortcuts
+-------------------------
+R               Select other Deck
+B + C-Pad       Cycle slider pages
+A               Execute selected button (if any)
+A + C-Pad       Change value at cursor
+B               Toggle pad mute state
+Y               Reset slider value
+X               Hide/Show Eudlicean view
+
+There are three types of selectable items in the
+upper screen:
+Sliders, buttons and lanes (pads).
+
+To change a slider value, first select it and
+then do either:
+
+A) Hold the A button while moving the Circle Pad.
+B) Touch a pad on the lower screen while moving
+   the Circle Pad.
+
+To execute a Button, just press A.
+
+The A, X and Y buttons do different things
+depending on the cursor selection.
+
+Pressing such a button while a lane is selected
+by the cursor will trigger an action which
+opererates on the lane (pad).
+
+Pressing such a button while a slider is
+selected and moving the C-Pad changes the slider
+value.
+
+The "Ln All",  "Ln Bus" and "Ln Sel" modes at the
+right side set the lane-context for certain
+actions.
+This is currently only supported by the sample-
+selection actions.
+
+The "Intrupt" function will temporarily mute
+all other lanes and unmute them again at the
+next bar when you play a sound.
+
+Rand All         Selects random samples for all
+                 lanes.
+
+
+Perform View Shortcuts
+----------------------
 Pad             Play/Select sound
 L + Pad         Erases notes while held
-R               Select other Deck
 Pad + C-Pad     Change value
 Pad + Left      Select previous sound
 Pad + Right     Select next sound
 Pad + Up        Solo pad sound
 Pad + Down      Mute pad sound
-B + C-Pad       Cycle slider pages
-A               Execute selected button (if any)
-A + C-Pad       Change value at cursor
-B               Toggle pad mute state
-Y               Play sound
-X               Reset slider value
 
 Touch pads to play their sound.
 
@@ -84,29 +125,6 @@ the sequencer.
 
 Disable "Play" to select pads without playing 
 them (found at bottom right side).
-
-There are three types of selectable items in the 
-upper screen:
-Sliders, buttons and lanes (pads). 
-
-To change a slider value, first select it and 
-then do either:
-
-A) Hold the A button while moving the Circle Pad.
-B) Touch a pad on the lower screen while moving 
-   the Circle Pad.
-
-To execute a Button, just press A.
-
-The A, X and Y buttons do different things 
-depending on the cursor selection.
-
-Pressing such a button while a lane is selected 
-by the cursor will trigger an action which 
-opererates on the lane (pad).
-
-Pressing such a button while a slider is 
-selected: (TODO: explain).
 
 The second of the four bottom row buttons cycles
 through several modes:
@@ -132,34 +150,34 @@ INSTRUMENTS - Assign different instruments to
               See "Instrument Palette" section
               for more information.
 
-When the "Assign" mode is on, the selected
-action is assigned to the A, X or Y button when
-pressed. This is useful to repeat a frequently
-used actions.
 
-The assignments are currently not yet saved
-and will revert when you re-open the app.
+Tracker View Shortcuts
+----------------------
+ L          Toggle wide / narrow view
+ R          Switch deck selection
 
-This will change in the future and more
-assignable combinations will be available.
+ A          Toggle playhead follow mode
+ B          Insert last value or escape selection
+ B + C-Pad  Change cell value
+ B + A      Clear cell value (twice for row)
+ B + Y      Insert note off
+ X          Cycle selection modes
+ Y          Open menu
 
-The "Ln All",  "Ln Bus" and "Ln Sel" modes at the
-right side set the lane-context for certain 
-actions.
-This is currently only supported by the sample-
-selection actions.
+ A + B      Set note length to cursor
+ A + C-Pad  Move cells Up/Down
+ A + D-Pad  Left/Right moves the lane (disabled)
+ Y + X      Set phrase length
+ Y + C-Pad  Page up/down or jump to top/bottom
+ Y + D-Up   Page up by 16 steps
+ Y + D-Down Page down by 16 steps
+ Y + D-Left Jump to top
+ Y + D-Righ Jump to bottom
 
-The "Intrupt" function will temporarily mute
-all other lanes and unmute them again at the 
-next bar when you play a sound.
-
-Rand All         Selects random samples for all
-                 lanes.
-
-
-Tracker View
-------------
-
+ Start      Toggle playback
+ Select     Toggle loop row mode
+            On: Repeats the current row clip
+            Off: Plays next row of island
 Press right on the DPAD to see.
 
 The top row displays the lane number and the 
@@ -186,31 +204,6 @@ enabled.
 There are 12 regular lanes, 4 Bus-lanes and one
 master lane.
 
- L          Toggle wide / narrow view
- R          Switch deck selection
- 
- A          Toggle playhead follow mode
- B          Insert last value or escape selection
- B + C-Pad  Change cell value
- B + A      Clear cell value (twice for row)
- B + Y      Insert note off
- X          Cycle selection modes
- Y          Open menu
- 
- A + B      Set note length to cursor
- A + C-Pad  Move cells Up/Down
- A + D-Pad  Left/Right moves the lane (disabled)
- Y + X      Set phrase length
- Y + C-Pad  Page up/down or jump to top/bottom
- Y + D-Up   Page up by 16 steps
- Y + D-Down Page down by 16 steps
- Y + D-Left Jump to top
- Y + D-Righ Jump to bottom
- 
- Start      Toggle playback     
- Select     Toggle loop row mode
-            On: Repeats the current row clip
-            Off: Plays next row of island
 Menu:
 
  Copy         Copy selection
@@ -320,8 +313,28 @@ Columns can be shown or hidden by pressing
 B + D-LEFT and toggling items in a menu.
 
 
-Clip Matrix View
-----------------
+Clip Matrix View Shortcuts
+--------------------------
+ CPAD       Move cursor
+ A          launch cell (phrase)
+ AA         Launch entire row
+ B + DRIGHT launch entire row
+ A+C-Up/Dn  Shift selected cells
+ B          Insert last value to cell
+            Cancel selection
+ B + CPAD   Change cell values (phrase)
+ X          Cycle selection modes (single | all)
+ X+C-Up/Dn  Select above or below
+ Y          Open menu
+ L          Toggle between editing phrase numbers
+            or clip length
+ Start      Toggle playback
+ Select     Toggle loop row mode
+            On: Repeats the current row clip
+            Off: Plays next row of island
+ B + Pad    Toggle lane mute-state
+ Y + X      Set clip length
+
 
 Press up on the DPAD to see.
 
@@ -336,25 +349,6 @@ A single cell can be copied by pressing B while
 selected. Pressing B after selecting another cell will 
 paste the value again.
 
- CPAD       Move cursor
- A          launch cell (phrase)
- AA         Launch entire row
- B + DRIGHT launch entire row
- A+C-Up/Dn  Shift selected cells
- B          Insert last value to cell
-            Cancel selection
- B + CPAD   Change cell values (phrase)
- X          Cycle selection modes (single | all)
- X+C-Up/Dn  Select above or below
- Y          Open menu
- L          Toggle between editing phrase numbers 
-            or clip length
- Start      Toggle playback     
- Select     Toggle loop row mode
-            On: Repeats the current row clip
-            Off: Plays next row of island
- B + Pad    Toggle lane mute-state
- Y + X      Set clip length
 
 Menu:
 
@@ -410,8 +404,8 @@ Menu:
 
 
 
-Tracker companion view
-----------------------
+Tracker Companion View Shortcuts
+--------------------------------
 
 This view is a very crude placeholder and needs 
 to be fleshed out or replaced in the future
@@ -457,7 +451,7 @@ To stop recording press A again, it is a toggle.
 the current length of the recording.
 
 
-Twin Browser
+Twin Browser Shortcuts
 --------------------------------
 A      Load/Execute file (song, wav etc.)
 B      Move to parent directory
@@ -489,7 +483,7 @@ up or down.
 Pressing A loads the selected song entry.
 
 
-Loading random samples (Categories View):
+Sample Categories View Shortcuts
 -----------------------------------------
 A       Load x samples for the selected rows.
 B       Select a single row.
@@ -497,6 +491,9 @@ X       Select multiple rows
 Y       Show popup for browsing / renaming.
 Start   Remove unused samples from memory.
 C-Pad   Select rows and number of samples to load
+
+
+Loading random samples:
 
 A set number of randomly chosen wav-files can be
 loaded from user-defined directories.
@@ -640,7 +637,7 @@ whatsoever, you may not want to use it in a
 public network.
 
 
-Waveform view
+Waveform View Shortcuts
 ---------------------------------------------
 Press right a few times to see the waveform-
 view. It displays the currently active sample.
