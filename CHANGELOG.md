@@ -1,5 +1,22 @@
 https://keepachangelog.com/en/1.1.0/
 
+## 0.1.1
+
+### Added
+- Option "Zip-Upload creates named folder" in general settings
+- "SampleReduce" column in tracker master section for automation (set 0 to disable)
+- "Reduce" toggle button in FX view (bottom right) acts as disable override
+
+### Changed
+- Retrig-column no longer requires a note, values of 0 and 1 retrigger the current sample
+- Renamed "Instrs" to "Palette" in drumpad pie-menu
+
+### Fixed
+- Sample loop setting has no effect
+
+### Removed
+- Hid pitch envelope in page3 of instrument settings temporarily until improved
+
 ## 0.1.0
 
 ### Added

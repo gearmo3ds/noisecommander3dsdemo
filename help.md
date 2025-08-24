@@ -173,6 +173,7 @@ Tracker View Shortcuts
  Y + D-Down Page down by 16 steps
  Y + D-Left Jump to top
  Y + D-Righ Jump to bottom
+ B + D-Left Manage column visibilities
 
  Start      Toggle playback
  Select     Toggle loop row mode
