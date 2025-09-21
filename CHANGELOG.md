@@ -1,5 +1,47 @@
 https://keepachangelog.com/en/1.1.0/
 
+# 0.1.3
+
+### Added
+- Ability to connect and synchronize multiple 3DS consoles via local "multiplayer" Wifi (UDS)
+  - Starting or re-starting playback on the host will also restart playback on the connected clients
+  - The switches are in the General Settings (press down and tap the "General" tab)
+  - Note that normal Wifi-features (Browser-upload) is not possible while UDS is active
+- "Neutral Preview" setting in preferences causes browser to play samples at original rate (default: on)
+- New Piano Buttons:
+  - "Gated" toggles whether lifting stops the note and sets the instrument playmode
+  - "Slide" allows pressing keys by sliding the stylus, else it needs to be lifted
+  - "Off" is a shortcut for stopping current sound and recording/inserting an note-off
+- Columns for fold distortion enable, width and gain
+- Tempo Dialog: left/right buttons nudge playhead by one step to adjust phase with external audio (e.g. other 3DS)
+- REC toggle in Bus-FX view
+- New Tracker/Bus-FX screen combo (press right three times) for inserting slider-automation visually
+
+### Changed
+- Retrig-column uses slice-positions now (i.e. works in combination)
+- Repeat mode in drum-view now uses last slice-position. Nice in combination with linear slice trigs
+- Enabling Right-channel-click-track disables stereo-widening effect
+- Piano key background color now changes while pressed
+- Fold-width (distortion) range now allows better articulation
+- Brought pitch envelope back and added columns for animation
+- Motion recording ability for most sliders in Bus-FX screen
+- "Mono to stereo" settings are now preserved
+
+### Fixed
+- Shifting notes with A+Up intermittently not working
+- Playback position is no longer shown in Waveform-view after pressing A
+- Memory-alignment crash when resampling (only happened with -O3 i.e. in release)
+
+## 0.1.2
+
+### Fixed
+- Note-events on buses may cancel other note-lanes. Such insertion is no longer possible.
+
+### Added
+- Pressing SELECT in drum pad screen toggles "Loop Row" setting
+- "Tracker Row Increment" option in general settings: Advances the cursor by x rows after note insertion
+- "Tracker Grid Snap" option in general settings: The cursor stays on grid when moving up or down
+
 ## 0.1.1
 
 ### Added
