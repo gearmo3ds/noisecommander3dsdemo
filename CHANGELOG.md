@@ -1,5 +1,20 @@
 https://keepachangelog.com/en/1.1.0/
 
+# 0.1.4
+
+### Changed
+- Renamed "Gated" to "Hold" in piano and de-coupled the setting from drum pads. Hold is off per default.
+
+### Fixed
+- Creating empty clip assigns instrument 255 (Can now insert new row number without losing instrument)
+- Pad-view does not refresh instr labels when new row plays
+- Capturing loop to song in Factotum looper always copies only one bar when set to two
+- Set fade default value to 16 in Factotum looper to avoid pops at boundary
+- Pitch envelope amount not applied when selecting instrument
+- Tapping "Sub-Tab" button (2nd from left at bottom in drum-pad view) does not toggle to previous sub-tab
+- Stopping of transport not transmitted when connected via UDS
+- Current slice-number not stored in song-file and lost at reload
+
 # 0.1.3
 
 ### Added
