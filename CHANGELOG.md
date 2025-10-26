@@ -1,5 +1,21 @@
 https://keepachangelog.com/en/1.1.0/
 
+# 0.1.5
+
+### Added
+- "StdyClck" setting in tempo-dialog: Keeps clock running and causes START to wait for next bar to start playing
+
+### Changed
+- Wav recording now creates a new file instead of appending to the previous
+
+### Fixed
+- Value in master volume column may lead to incorrect instrument look-up and stopping of a sustained looping note
+- Octave +/- buttons skipping a value making it impossible to play the -1 octave
+- App force quits when pressing upload button and wifi is disabled
+  - Now a message suggests to enable Wifi
+  - Networking is re-initialized and does not fail after wifi is switched multiple times
+  - If you start the function too quickly after enableding wifi you'll see errors, just start it again
+
 # 0.1.4
 
 ### Changed
